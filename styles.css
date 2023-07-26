@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url(/css/header.css);
+/* @import url(/css/main.css); */
+@import url(/css/hero.css);
+@import url(/css/about.css);
+@import url(/css/projects.css);
+@import url(/css/contact.css);
+
+
+:root {
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-backdrop: hsla(45, 17%, 95%, 0.8);
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-blue: hsla(204, 97%, 54%, 1);
+  --color-lightblue: hsla(208, 90%, 40%, 1);
+  --color-lightgrey: hsla(0, 0%, 97%, 1);
+
+  --color-babygrey: #ddd6f3
+  --color-mint: hsla(172, 45%, 75%, 1);
+  --color-lilac: hsla(227, 65%, 87%, 1);
+  --color-rust: hsla(22, 62%, 76%, 1);
+  --color-peach: #ec8c69
+  --color-green300: hsla(159, 42%, 88%, 1);
+
+  --color-gradient: linear-gradient(
+    45deg,
+    hsla(172, 45%, 75%, 1) 0%,
+    hsla(227, 65%, 87%, 1) 25%,
+    hsla(22, 62%, 76%, 1) 50%,
+    #ec8c69 75%
+  );
+
+  --color-gradient2: linear-gradient(315deg, rgba(250, 172, 168, 0.5) 5%, rgba(116, 143, 252, 0.5) 10%, rgba(56, 217, 169, 0.5) 20%, rgba(206, 212, 218, 0.5) 40%, rgba(218, 119, 242, 0.5) 52%, hsla(22, 62%, 76%, 1), rgba(105, 219, 124, 0.5) 78%);
+
+  --color-gradient3: linear-gradient(315deg, rgba(250, 172, 168, 0.5) 18%, rgba(116, 143, 252, 0.5) 38%, rgba(56, 217, 169, 0.5) 59%, rgba(206, 212, 218, 0.5) 81%, rgba(218, 119, 242, 0.5) 100%);
+
+  --color-gradient4: radial-gradient(circle, rgba(250, 172, 168, 0.5) 18%, rgba(116, 143, 252, 0.5) 38%, rgba(56, 217, 169, 0.5) 59%, rgba(206, 212, 218, 0.5) 81%, rgba(218, 119, 242, 0.5) 100%);
+
+  --color-babyblue: hsla(206, 84%, 86%, 1);
+  --color-pink: hsla(284, 61%, 74%, 1);
+  --color-dark: hsla(0, 0%, 9%, 1);
+  --color-hilite: hsla(172, 95%, 18%, 1);
+  
+  --color-beige: hsla(36, 31%, 90%, 0.895);
+
+  --color-light-border: rgba(0,0,0,.05);
+ 
+  --color-green400: hsla(160, 52%, 71%, 1);
+  --color-green500: hsla(172, 95%, 18%, 1);
+  --color-green600: hsla(171, 15%, 35%, 1);
+  --color-green700: hsla(171, 11%, 24%, 1);
+  --color-green800: hsla(158, 23%, 18%, 1);
+  
+  --color-deep-green: hsl(107, 87%, 15%, 1);
+
+  --color-text-primary: var(--color-green500);
+  --color-text-secondary: var(--color-green600);
+  --color-text-tertiary: var(--color-beige);
+  --color-text-quarterly: var(--color-green300);
+  --color-text-hilite: var(--color-green400);
+  --color-text-active: var(--color-white);
+  --color-text-bold: var(--color-green700);
+  --color-text-contrast: var(--color-green800);
+  --clr-light: #fdffc4;
+ 
+  --color-primary: var(--color-beige);
+  --color-primary-accent: var(--color-green500);
+  --color-primary-border: var(--color-white);
+  --color-tertiary: var(--color-green300);
+  --color-opaque: hsla(0, 0%, 100%, 0.5);
+
+  --ff-primary: 'Montserrat', sans-serif;
+
+  
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 800;
+
+  --fs-paragraph: 30px;
+  --fs-links: 18px;
+  --fs-section-header: 32px;
+  --fs-hero-header: 64px;
+
+  --fs-links-mobile: 0.7rem;
+
+  --fs-300: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.5rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+p {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary);
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,body {
+ font-family: var(--ff-primary);
+}
+
+/* Set core body defaults */
+body {
+  padding: 1rem;
+  
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: var(--color-gradient4);
+  background-size: 1000%;
+  animation: background-hero-animation 15s infinite alternate;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------------- Utility Classes ---------------------------- */
+/* Animating a change in color gradient for our background */
+
+@keyframes background-hero-animation {
+  0% {
+    background-position: left;
+  }
+  /* 50% {
+    background-position: center;
+  } */
+  100% {
+    background-position: right;
+  }
+}
+
+.scrolled {
+  background-color: var(--color-beige);
+}
+
+.blurred {
+  filter: blur(8px); /* Adjust the blur intensity as needed */
+}
+
+.darkmode {
+  --clr-light: #fdffc4;
+  --clr-dark: #00332a;
+  --clr-primary: #202302;
+  --clr-secondary: #00100d;
+  --clr-accent: #ff7750;
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+  background-color: var(--background);
+  color: var(--clr-light);
+}
+
+.darkmode__text {
+ color: var(--clr-light) !important; 
+}
+
+
+
+
+
+
+
+
+
+
+

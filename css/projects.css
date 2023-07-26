@@ -1,0 +1,101 @@
+/* -------------------- Projects Section --------------------*/
+
+.projects__heading {
+  color: var(--color-hilite);
+  font-size: var(--fs-section-header);
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+.card__container {
+  /* display: flex;
+    flex-direction: row;
+    flex: auto;
+    gap: 16px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 2.5rem;
+}
+
+.card {
+  background-image: url('/images/pexels-cottonbro-studio-4065864.jpg');
+  background-size: cover;
+  padding: 5rem 0 0;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+  margin: 1em auto;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  box-shadow: 3px 10px 22px 1px rgba(0, 0, 0, 0.44);
+  /* -webkit-box-shadow: 3px 10px 22px 1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 3px 10px 22px 1px rgba(0,0,0,0.44); */
+}
+
+.card__title {
+  margin-left: 0.5em;
+  color: whitesmoke;
+  position: relative;
+  width: max-content;
+}
+
+.card__body {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card__content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 0.2) 10%,
+    hsl(107, 87%, 15%, 1)
+  );
+}
+
+.card__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--color-deep-green);
+  bottom: 16px;
+  padding: 0 1em;
+  z-index: -1;
+  transition: 3s ease;
+}
+
+.card-btn {
+  display: block;
+  color: var(--color-white);
+  padding: 6px 20px;
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  transition: 0.3s;
+  width: fit-content;
+}
+
+.card-btn:hover {
+  background-color: var(--color-deep-green);
+  border: transparent;
+}
+
+.disabled-btn {
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .card__container {
+    grid-template-columns: 1fr;
+  }
+
+  .card__title::after {
+    bottom: 5px;
+  }
+}
