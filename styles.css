@@ -9,6 +9,7 @@
 
 :root {
   --color-white: hsla(0, 0%, 100%, 1);
+  --color-whitesmoke: whitesmoke;
   --color-backdrop: hsla(45, 17%, 95%, 0.8);
   --color-black: hsla(0, 0%, 0%, 1);
   --color-blue: hsla(204, 97%, 54%, 1);
@@ -41,6 +42,8 @@
   --color-dark: hsla(0, 0%, 9%, 1);
   --color-hilite: hsla(172, 95%, 18%, 1);
   
+  --clr-dark: #00332a;
+
   --color-beige: hsla(36, 31%, 90%, 0.895);
 
   --color-light-border: rgba(0,0,0,.05);
@@ -207,6 +210,15 @@ svg {
   --background: var(--clr-dark);
   background-color: var(--background);
   color: var(--clr-light);
+}
+
+.darkmode-navbg {
+  background-color: var(--clr-primary);
+  filter: blur(1px);
+}
+
+.active-link {
+
 }
 
 .darkmode__text {

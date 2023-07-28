@@ -21,6 +21,7 @@ header {
   right: 0;
   max-width: fit-content;
   /* max-width: fit-content; */
+  backdrop-filter: blur(10px);
   padding: 1rem;
   margin: 2% auto;
   border-radius: 8rem;
