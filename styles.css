@@ -10,7 +10,7 @@
 :root {
   --color-white: hsla(0, 0%, 100%, 1);
   --color-whitesmoke: whitesmoke;
-  --color-backdrop: hsla(45, 17%, 95%, 0.8);
+  --color-backdrop: hsla(45, 17%, 95%, 0.50);
   --color-black: hsla(0, 0%, 0%, 1);
   --color-blue: hsla(204, 97%, 54%, 1);
   --color-lightblue: hsla(208, 90%, 40%, 1);
@@ -70,7 +70,7 @@
   --color-primary-accent: var(--color-green500);
   --color-primary-border: var(--color-white);
   --color-tertiary: var(--color-green300);
-  --color-opaque: hsla(0, 0%, 100%, 0.5);
+  --color-opaque: hsla(0, 0%, 100%, 0.4);
 
   --ff-primary: 'Montserrat', sans-serif;
 
@@ -192,17 +192,27 @@ svg {
 }
 
 .scrolled {
-  background-color: var(--color-beige);
+  background-color: var(--color-backdrop);
 }
 
-.blurred {
-  filter: blur(8px); /* Adjust the blur intensity as needed */
+.darkmode-scrolled {
+  --clr-primary: rgb(32, 35, 2, 0.5);
+  background-color: var(--clr-primary);
 }
+
+.darkmode-navbar {
+  --clr-primary: rgb(32, 35, 2, 0.5);
+  background-color: var(--clr-primary);
+}
+
+/* .blurred {
+  filter: blur(8px);
+} */
 
 .darkmode {
   --clr-light: #fdffc4;
   --clr-dark: #00332a;
-  --clr-primary: #202302;
+  --clr-primary: rgb(32, 35, 2, 0.5);
   --clr-secondary: #00100d;
   --clr-accent: #ff7750;
 
@@ -212,14 +222,8 @@ svg {
   color: var(--clr-light);
 }
 
-.darkmode-navbg {
-  background-color: var(--clr-primary);
-  filter: blur(1px);
-}
 
-.active-link {
 
-}
 
 .darkmode__text {
  color: var(--clr-light) !important; 

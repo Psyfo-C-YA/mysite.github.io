@@ -4,12 +4,20 @@ header {
   justify-content: center;
 }
 
-#navbar a.active {
+.active {
   font-weight: bold;
   /* border: 1px solid  #ddd6f3; */
   border-radius: 5rem;
   padding: 0.5rem;
-  background-color: hsla(45, 17%, 95%, 0.8);
+  background-color: var(--bg-color-active, hsla(45, 17%, 95%, 0.8));
+}
+
+.active-darkmode {
+  font-weight: bold;
+  /* border: 1px solid  #ddd6f3; */
+  border-radius: 5rem;
+  padding: 0.5rem;
+  background-color: var(--bg-darkmode-color-active, rgba(32, 35, 2, 1));
 }
 
 .navbar {

@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  padding: 10rem;
+  padding: 12rem;
 }
 
 .column {
@@ -74,7 +74,7 @@
 }
 
 .bottom-middle-box {
-  background-color: #d3d3d3;
+  background-color: var(--color-opaque);
   grid-column: 1 / span 2;
   padding: 20px;
   text-align: center;
