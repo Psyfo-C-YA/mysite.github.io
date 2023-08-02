@@ -97,6 +97,18 @@ function toggleActive() {
 // Add a click event listener to the button
 toggleButton.addEventListener('click', toggleActive);
 
+const lines = document.querySelectorAll('.line');
+
+lines.forEach(line => {
+  line.addEventListener('mouseenter', () => {
+    line.style.height = '4rem'; 
+  });
+
+  line.addEventListener('mouseleave', () => {
+    line.style.height = '2rem'; 
+  });
+});
+
 function scrollMode() {
   const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section');

@@ -76,8 +76,19 @@
 .bottom-middle-box {
   background-color: var(--color-opaque);
   grid-column: 1 / span 2;
-  padding: 20px;
+  padding: 1px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.line {
+  width: 10px;
+  height: 2rem;
+  background-color: var(--color-hilite);
+  margin: 5px;
+  transition: height 0.3s ease;
+  
 }
 
 @media screen and (max-width: 768px) {
