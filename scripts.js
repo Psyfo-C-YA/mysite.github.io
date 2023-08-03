@@ -16,6 +16,9 @@ const sporifyIcon = document.getElementById('sportify__icon');
 const sportifyParagraphs = document.querySelectorAll('#sportify div p');
 // const sportifyContent = document.querySelectorAll('');
 const bottomMiddleBox = document.getElementById('bottom-middle-box');
+const hoverSound = document.getElementById('sportify__sound');
+
+const apparentlySound = new Audio('sound/Cole.mp3');
 
 // Initialize a variable to track the state
 let isActive = false;
@@ -118,6 +121,22 @@ lines.forEach((line) => {
   line.addEventListener('mouseleave', () => {
     line.style.height = '2rem';
   });
+});
+
+hoverSound.addEventListener('click', () => {
+  apparentlySound.play();
+});
+
+hoverSound.addEventListener('dblclick', () => {
+  apparentlySound.pause();
+});
+
+hoverSound.addEventListener('mouseenter', () => {
+  apparentlySound.play();
+});
+
+hoverSound.addEventListener('mouseleave', () => {
+  apparentlySound.pause();
 });
 
 function scrollMode() {
