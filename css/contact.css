@@ -83,12 +83,11 @@
 }
 
 .line {
-  width: 10px;
+  width: 2rem;
   height: 2rem;
   background-color: var(--color-hilite);
-  margin: 5px;
+  margin: 2px;
   transition: height 0.3s ease;
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -112,5 +111,13 @@
 
   .sportify {
     width: fit-content;
+  }
+
+  .line {
+    width: 10px;
+    height: 2rem;
+    background-color: var(--color-hilite);
+    margin: 2px;
+    transition: height 0.3s ease;
   }
 }
