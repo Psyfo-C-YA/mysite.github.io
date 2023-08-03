@@ -235,6 +235,10 @@
     margin: 0 auto;
   } */
 
+  .wave-menu {
+    width: 100px;
+  }
+
   .line {
     width: 7px;
     height: 2rem;
