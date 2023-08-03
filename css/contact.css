@@ -76,14 +76,16 @@
 .bottom-middle-box {
   background-color: var(--color-opaque);
   grid-column: 1 / span 2;
-  padding: 1px;
+  padding: 0.05rem;
   text-align: center;
   display: flex;
   flex-direction: row;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 
 .line {
-  width: 2rem;
+  width: 1rem;
   height: 2rem;
   background-color: var(--color-hilite);
   margin: 2px;
@@ -113,11 +115,15 @@
     width: fit-content;
   }
 
+  /* .bottom-middle-box {
+    margin: 0 auto;
+  } */
+
   .line {
-    width: 10px;
+    width: 7px;
     height: 2rem;
     background-color: var(--color-hilite);
     margin: 2px;
-    transition: height 0.3s ease;
+    /* transition: height 0.3s ease; */
   }
 }

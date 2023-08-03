@@ -15,6 +15,7 @@ const sportifyDiv = document.getElementById('sportify');
 const sporifyIcon = document.getElementById('sportify__icon');
 const sportifyParagraphs = document.querySelectorAll('#sportify div p');
 // const sportifyContent = document.querySelectorAll('');
+const bottomMiddleBox = document.getElementById('bottom-middle-box');
 
 // Initialize a variable to track the state
 let isActive = false;
@@ -58,6 +59,7 @@ function toggleActive() {
       div.classList.add('darkmode__text');
     });
 
+    // bottomMiddleBox.classList.add('darkmode-navbar');
     lines.forEach((line) => {
       line.classList.add('darkmode-navbar');
     });
@@ -96,6 +98,7 @@ function toggleActive() {
       div.classList.remove('darkmode__text');
     });
 
+    // bottomMiddleBox.classList.remove('darkmode-navbar');
     lines.forEach((line) => {
       line.classList.remove('darkmode-navbar');
     });
