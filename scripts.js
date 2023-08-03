@@ -21,7 +21,7 @@ let isActive = false;
 
 // Function to toggle the active state
 function toggleActive() {
-  isActive = !isActive; 
+  isActive = !isActive;
   if (isActive) {
     bodyElement.classList.add('darkmode');
     // navElement.classList.add('darkmode-navbar');
@@ -29,8 +29,8 @@ function toggleActive() {
 
     navElement__a.forEach((a) => {
       a.classList.add('darkmode__text');
-    })
-  
+    });
+
     navElement__a.forEach((link) => link.classList.remove('active'));
 
     navElement.classList.add('darkmode-scrolled');
@@ -47,15 +47,19 @@ function toggleActive() {
 
     // sportifyDiv.classList.add('darkmode');
     sportifyDiv.classList.add('darkmode-navbar');
-    
+
     sporifyIcon.classList.add('darkmode__text');
 
-    sportifyParagraphs.forEach((p) => { 
+    sportifyParagraphs.forEach((p) => {
       p.classList.add('darkmode__text');
     });
 
     nestedContactDivText.forEach((div) => {
       div.classList.add('darkmode__text');
+    });
+
+    lines.forEach((line) => {
+      line.classList.add('darkmode-navbar');
     });
   } else {
     bodyElement.classList.remove('darkmode');
@@ -84,12 +88,16 @@ function toggleActive() {
 
     sporifyIcon.classList.remove('darkmode__text');
 
-    sportifyParagraphs.forEach((p) => { 
+    sportifyParagraphs.forEach((p) => {
       p.classList.remove('darkmode__text');
     });
 
     nestedContactDivText.forEach((div) => {
       div.classList.remove('darkmode__text');
+    });
+
+    lines.forEach((line) => {
+      line.classList.remove('darkmode-navbar');
     });
   }
 }
@@ -99,13 +107,13 @@ toggleButton.addEventListener('click', toggleActive);
 
 const lines = document.querySelectorAll('.line');
 
-lines.forEach(line => {
+lines.forEach((line) => {
   line.addEventListener('mouseenter', () => {
-    line.style.height = '4rem'; 
+    line.style.height = '4rem';
   });
 
   line.addEventListener('mouseleave', () => {
-    line.style.height = '2rem'; 
+    line.style.height = '2rem';
   });
 });
 
@@ -115,23 +123,18 @@ function scrollMode() {
   const navbarLinks = document.querySelectorAll('#navbar a');
   // const content = document.querySelector('h1');
   // const content = document.querySelector('body');
-  
+
   // Get the current vertical scroll position
   const scrollPosition = window.scrollY;
-
- 
-  
 
   // Determine when to add or remove the "scrolled" class
   if (scrollPosition >= 1 && bodyElement.classList.contains('darkmode')) {
     // Adjust this value as needed to control when the background becomes visible
     navbar.classList.add('darkmode-scrolled');
-  }
-  else if (scrollPosition >=1 ) {
+  } else if (scrollPosition >= 1) {
     navbar.classList.remove('darkmode-scrolled');
     navbar.classList.add('scrolled');
-  }
-   else {
+  } else {
     navbar.classList.remove('scrolled');
     navbar.classList.remove('darkmode-scrolled');
   }
@@ -145,22 +148,20 @@ function scrollMode() {
     }
   }
 
-
   if (bodyElement.classList.contains('darkmode')) {
-     // Remove the active class from all links
+    // Remove the active class from all links
     navbarLinks.forEach((link) => link.classList.remove('active-darkmode'));
-  
+
     navbarLinks.forEach((link) => link.classList.remove('active'));
     // Add the active class to the corresponding link
     navbarLinks[currentSectionIndex].classList.add('active-darkmode');
   } else {
-     // Remove the active class from all links
-     navbarLinks.forEach((link) => link.classList.remove('active-darkmode'));
-  
+    // Remove the active class from all links
+    navbarLinks.forEach((link) => link.classList.remove('active-darkmode'));
+
     navbarLinks.forEach((link) => link.classList.remove('active'));
 
     // Add the active class to the corresponding link
     navbarLinks[currentSectionIndex].classList.add('active');
   }
- 
 }
