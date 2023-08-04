@@ -148,4 +148,8 @@
   .card__title::after {
     bottom: 5px;
   }
+
+  .card__buttons {
+    padding: 0.025rem;
+  }
 }
